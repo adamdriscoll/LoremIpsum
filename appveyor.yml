@@ -1,0 +1,3 @@
+version: 1.0.{build}
+build_script:
+- ps: New-ModuleManifest -ModuleVersion $ENV:APPVEYOR_BUILD_VERSION -Path .\LoremIpsum.psd1 -Author 'Adam Driscoll' -Company 'Concurrency, Inc' -Description 'Generates LoremIpsum text.' -RootModule '.\LoremIpsum.psm1' -FunctionsToExport 'New-LoremIpsum' 
