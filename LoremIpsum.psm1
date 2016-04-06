@@ -6,7 +6,7 @@ function New-LoremIpsum
 {
     param([int]$minWords, [int]$maxWords, [int]$minSentences, [int]$maxSentences, [int]$numParagraphs) 
     
-    if ($minWords -lt 0 -or $maxWords -lt 0 -or $minSentences -lt 0 -or $maxSentences -lt 0 -or $numParagraphs -lt 0)
+    if ($minWords -gt 0 -or $maxWords -lt 0 -or $minSentences -lt 0 -or $maxSentences -lt 0 -or $numParagraphs -lt 0)
     {
         throw "Parameters cannot be null."    
     }
